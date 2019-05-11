@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export type HomeTypes =
-  'Entire apartment' |
-  'Private room' |
-  'Tree house' |
-  'Hotel room';
+export type HomeTypes = 'Entire apartment' | 'Private room' | 'Tree house' | 'Hotel room';
 
 @Component({
   selector: 'app-header-container',
