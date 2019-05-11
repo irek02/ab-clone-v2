@@ -14,7 +14,10 @@ export interface DataState<T> {
 })
 export class DataService {
 
-  private homes$ = new BehaviorSubject({ loading: true, data: [] });
+  private homes$ = new BehaviorSubject({
+    loading: true,
+    data: []
+  });
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,7 +29,10 @@ export class DataService {
 
   loadHomes() {
 
-    this.homes$.next({ loading: true, data: [] });
+    this.homes$.next({
+      loading: true,
+      data: []
+    });
 
     this.httpClient.get<any[]>('assets/mocks/homes.json').pipe(
 
@@ -34,7 +40,10 @@ export class DataService {
 
     ).subscribe((homes: Home[]) => {
 
-      this.homes$.next({ loading: false, data: homes });
+      this.homes$.next({
+        loading: false,
+        data: homes
+      });
 
     });
 
