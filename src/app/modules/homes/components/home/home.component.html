@@ -1,6 +1,9 @@
 <div class="uk-card">
   <div class="uk-card-media-top">
-    <img src="{{ home.image_url }}" class="uk-border-rounded" />
+    <img
+      src="{{ home.image_url }}"
+      class="uk-border-rounded"
+    />
   </div>
   <div class="uk-card-body uk-padding-remove">
     <div
@@ -11,7 +14,8 @@
     <div class="uk-text-bold">
       {{ home.title }}
     </div>
-    <div class="uk-text-small uk-text-muted">${{ home.price }} per night</div>
+    <div class="uk-text-small uk-text-muted">${{ home.price }} per
+      night</div>
     <div class="uk-flex uk-flex-middle uk-text-small">
       <span
         *ngFor="let star of parseStars(home.rating.stars)"
