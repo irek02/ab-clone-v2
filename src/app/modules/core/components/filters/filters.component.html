@@ -5,6 +5,7 @@
   >
     <button
       (click)="toggleFilterDropdown.next('homeType')"
+      [ngClass]="{ 'uk-button-primary': filterBarState.homeType.filters.length > 0 }"
       class="uk-button uk-button-default uk-button-small uk-text-nowrap"
     >Home type</button>
     <div
