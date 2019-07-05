@@ -1,1 +1,19 @@
-<app-home-list [homes]="homes$ | async"></app-home-list>
+<div
+  uk-sticky="offset: 90"
+  class="uk-background-default uk-width-1-1"
+>
+  <app-filters
+    [filterBarState]="filterBarState$ | async"
+    (closeFilterDropdown)="closeFilterDropdown($event)"
+    (toggleFilterDropdown)="toggleFilterDropdown($event)"
+    (applyFilters)="applyFilters($event)"
+  ></app-filters>
+
+  <hr class="uk-margin-small uk-margin-remove-bottom" />
+</div>
+
+<section
+  class="uk-section uk-padding-small uk-padding-remove-left uk-padding-remove-top"
+>
+  <app-home-list [homes]="homes$ | async"></app-home-list>
+</section>

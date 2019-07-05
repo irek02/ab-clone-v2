@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { Filters } from '../../containers/header-container/header-container.component';
+import { Filters } from '../../../core/containers/header-container/header-container.component';
 
 @Component({
   selector: 'app-filters',
