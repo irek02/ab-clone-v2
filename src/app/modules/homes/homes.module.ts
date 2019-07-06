@@ -8,6 +8,7 @@ import { HomeContainerComponent } from './containers/home-container/home-contain
 import { FiltersComponent } from './components/filters/filters.component';
 import { FilterHomeTypeFormComponent } from './components/filter-home-type-form/filter-home-type-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeImageGalleryComponent } from './components/home-image-gallery/home-image-gallery.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HomeContainerComponent,
     FiltersComponent,
-    FilterHomeTypeFormComponent
+    FilterHomeTypeFormComponent,
+    HomeImageGalleryComponent
   ],
   imports: [
     CommonModule,
