@@ -1,0 +1,59 @@
+{
+  "image_urls": [
+    "assets/listing.jpeg",
+    "assets/listing2.jpeg",
+    "assets/listing3.jpeg",
+    "assets/listing4.jpeg",
+    "assets/listing.jpeg"
+  ],
+  "type": "Private room",
+  "location": "New York",
+  "title": "Charming gardenroom with woodstove",
+  "price": 73,
+  "rating": {
+    "stars": 4,
+    "count": 183
+  },
+  "description": "Comfortable and quiet country house the woods on a dead-end road. The house has a wraparound porch, high ceilings, an open flow with exposed beams, an abundance of windows and a wood stove. The property has five acres to explore, mostly woods, leading down to a stream and tidal cove. There is a canoe available and at high tide can be paddled out onto the river.",
+  "amenities": {
+    "Indoor fireplace": true,
+    "Heating": true,
+    "Wifi": true,
+    "Free parking on premises": true,
+    "Kitchen": true,
+    "Private entrance": true,
+    "Air conditioning": false,
+    "Washer": false,
+    "TV": false
+  },
+  "reviews": [
+    {
+      "name": "Maria",
+      "date": "June 2019",
+      "review": "The house was very cute. We had a great time staying there!"
+    },
+    {
+      "name": "Sean",
+      "date": "May 2019",
+      "review": "Great value, homey, great location."
+    },
+    {
+      "name": "Kristy",
+      "date": "January 2019",
+      "review": "Excellent and comfortable space."
+    },
+    {
+      "name": "Bryan",
+      "date": "January 2019",
+      "review": "Beautiful little place for our weekend getaway."
+    }
+  ],
+  "host": {
+    "name": "Kate",
+    "location": "Phippsburg, ME",
+    "joined": "September, 2019",
+    "reviews": 9,
+    "verified": true,
+    "response_time": "within an hour"
+  }
+}

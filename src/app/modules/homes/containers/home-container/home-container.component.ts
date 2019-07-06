@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService, DataState } from 'src/app/modules/core/services/data.service';
+import { Observable } from 'rxjs';
+import { Home } from '../home-list-container/home-list-container.component';
 
 @Component({
   selector: 'app-home-container',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeContainerComponent implements OnInit {
 
-  constructor() { }
+  home$: Observable<DataState<Home>>;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+
+    this.home$ = this.dataService.getHome$();
+
+    this.dataService.loadHome();
+
   }
 
 }

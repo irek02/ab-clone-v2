@@ -17,6 +17,7 @@ export interface DataState<T> {
 export class DataService {
 
   private homes$ = new BehaviorSubject({ loading: true, data: [] });
+  private home$ = new BehaviorSubject({ loading: true, data: null });
 
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) { }
 
@@ -79,6 +80,33 @@ export class DataService {
           homeType: []
         });
       })
+    );
+
+  }
+
+  getHome$(): Observable<DataState<Home>> {
+
+    return this.home$.asObservable();
+
+  }
+
+  loadHome() {
+
+    this.home$.next({ loading: true, data: null });
+
+    this.getHomeFromApi$().subscribe((home: Home) => {
+
+      this.home$.next({ loading: false, data: home });
+
+    });
+
+  }
+
+  getHomeFromApi$(): Observable<Home> {
+
+    return this.httpClient.get<Home>('assets/mocks/home.json').pipe(
+      // Simulate network delay to see the spinner.
+      delay(1000)
     );
 
   }
