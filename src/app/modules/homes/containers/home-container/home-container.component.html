@@ -40,15 +40,47 @@
           <hr>
           <div>
             <span class="uk-text-bold">Amenities</span>
+            <div
+              *ngFor="let amenity of home.data.amenities; let i=index"
+            >
+              <ng-container *ngIf="i < 4">
+                {{ amenity.name }}
+              </ng-container>
+            </div>
           </div>
+          <hr>
           <div>
-            Reviews
+            <span class="uk-text-bold">Reviews</span>
+            <div *ngFor="let review of home.data.reviews">
+              <div>
+                {{ review.name }}
+              </div>
+              <div>
+                {{ review.date }}
+              </div>
+              <div>
+                {{ review.review }}
+              </div>
+            </div>
           </div>
+          <hr>
           <div>
-            Host info
+            <span class="uk-text-bold">Host info</span>
+            <div>{{ home.data.host.name }}</div>
           </div>
+          <hr>
           <div>
-            Map
+            <div class="uk-text-bold">Map</div>
+            <iframe
+              width="600"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=new york&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
           </div>
         </div>
         <div class="uk-width-1-3 uk-margin-top">
@@ -56,11 +88,20 @@
             class="uk-card uk-card-default uk-card-body"
             uk-sticky="offset: 120"
           >
-            <h3 class="uk-card-title">Default</h3>
-            <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et
-              dolore magna aliqua.</p>
+            <div>
+              <span class="uk-text-large uk-text-bold">
+                ${{ home.data.price }}
+              </span>
+              per night
+            </div>
+            <div class="uk-margin">
+              <button
+                class="uk-button uk-button-danger uk-button-large uk-width-1-1 uk-text-bold"
+              >Reserve</button>
+            </div>
+            <div class="uk-text-small uk-text-center">
+              You won’t be charged yet
+            </div>
           </div>
         </div>
       </div>

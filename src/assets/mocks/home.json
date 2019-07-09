@@ -15,17 +15,44 @@
     "count": 183
   },
   "description": "Comfortable and quiet country house the woods on a dead-end road. The house has a wraparound porch, high ceilings, an open flow with exposed beams, an abundance of windows and a wood stove. The property has five acres to explore, mostly woods, leading down to a stream and tidal cove. There is a canoe available and at high tide can be paddled out onto the river.",
-  "amenities": {
-    "Indoor fireplace": true,
-    "Heating": true,
-    "Wifi": true,
-    "Free parking on premises": true,
-    "Kitchen": true,
-    "Private entrance": true,
-    "Air conditioning": false,
-    "Washer": false,
-    "TV": false
-  },
+  "amenities": [
+    {
+      "name": "Indoor fireplace",
+      "status": true
+    },
+    {
+      "name": "Heating",
+      "status": true
+    },
+    {
+      "name": "Wifi",
+      "status": true
+    },
+    {
+      "name": "Free parking on premises",
+      "status": true
+    },
+    {
+      "name": "Kitchen",
+      "status": true
+    },
+    {
+      "name": "Private entrance",
+      "status": true
+    },
+    {
+      "name": "Air conditioning",
+      "status": true
+    },
+    {
+      "name": "Washer",
+      "status": false
+    },
+    {
+      "name": "TV",
+      "status": false
+    }
+  ],
   "reviews": [
     {
       "name": "Maria",
