@@ -1,28 +1,69 @@
-<app-home-image-gallery></app-home-image-gallery>
-<div *ngIf="(home$ | async) as home">
-  {{ home | json }}
-</div>
-<div class="uk-container uk-container-small">
-  <h1 class="uk-heading-medium">Homes</h1>
-  <div>
-    Owen [image]
+<ng-container *ngIf="(home$ | async) as home">
+  <div
+    *ngIf="home.loading"
+    class="uk-container uk-text-center uk-margin"
+  >
+    <div uk-spinner="ratio: 3"></div>
   </div>
-  <div>
-    Location . Type
+  <div *ngIf="home.data">
+    <app-home-image-gallery></app-home-image-gallery>
+    <div class="uk-container uk-container-medium uk-margin-bottom">
+      <div uk-grid>
+        <div class="uk-width-2-3">
+          <div
+            class="uk-margin-top uk-grid-collapse"
+            uk-grid
+          >
+            <div class="uk-width-5-6">
+              <h1 class="uk-heading-medium uk-margin-remove-bottom">
+                {{ home.data.title }}
+              </h1>
+              <div>
+                {{ home.data.location }} • {{ home.data.type }}
+              </div>
+            </div>
+            <div class="uk-width-1-6 uk-text-center">
+              <img
+                src="{{ home.data.host.image_url }}"
+                class="uk-margin-small-top uk-border-circle"
+                style="width:80px;height:80px;"
+              />
+              <div>
+                {{ home.data.host.name }}
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div>
+            {{ home.data.description }}
+          </div>
+          <hr>
+          <div>
+            <span class="uk-text-bold">Amenities</span>
+          </div>
+          <div>
+            Reviews
+          </div>
+          <div>
+            Host info
+          </div>
+          <div>
+            Map
+          </div>
+        </div>
+        <div class="uk-width-1-3 uk-margin-top">
+          <div
+            class="uk-card uk-card-default uk-card-body"
+            uk-sticky="offset: 120"
+          >
+            <h3 class="uk-card-title">Default</h3>
+            <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et
+              dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    Description
-  </div>
-  <div>
-    Amenities
-  </div>
-  <div>
-    Reviews
-  </div>
-  <div>
-    Host info
-  </div>
-  <div>
-    Map
-  </div>
-</div>
+</ng-container>

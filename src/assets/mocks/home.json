@@ -8,7 +8,7 @@
   ],
   "type": "Private room",
   "location": "New York",
-  "title": "Charming gardenroom with woodstove",
+  "title": "Charming gardenroom with woodstove ",
   "price": 73,
   "rating": {
     "stars": 4,
@@ -54,6 +54,7 @@
     "joined": "September, 2019",
     "reviews": 9,
     "verified": true,
-    "response_time": "within an hour"
+    "response_time": "within an hour",
+    "image_url": "assets/listing2.jpeg"
   }
 }
