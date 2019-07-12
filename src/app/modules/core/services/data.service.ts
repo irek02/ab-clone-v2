@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Filters } from '../containers/header-container/header-container.component';
 import { Home } from '../../homes/containers/home-list-container/home-list-container.component';
+import { HomeExtended } from '../../homes/containers/home-container/home-container.component';
 
 export interface DataState<T> {
   loading: boolean;
@@ -84,7 +85,7 @@ export class DataService {
 
   }
 
-  getHome$(): Observable<DataState<Home>> {
+  getHome$(): Observable<DataState<HomeExtended>> {
 
     return this.home$.asObservable();
 
@@ -94,7 +95,7 @@ export class DataService {
 
     this.home$.next({ loading: true, data: null });
 
-    this.getHomeFromApi$().subscribe((home: Home) => {
+    this.getHomeFromApi$().subscribe((home: HomeExtended) => {
 
       this.home$.next({ loading: false, data: home });
 
@@ -102,9 +103,9 @@ export class DataService {
 
   }
 
-  getHomeFromApi$(): Observable<Home> {
+  getHomeFromApi$(): Observable<HomeExtended> {
 
-    return this.httpClient.get<Home>('assets/mocks/home.json').pipe(
+    return this.httpClient.get<HomeExtended>('assets/mocks/home.json').pipe(
       // Simulate network delay to see the spinner.
       delay(1000)
     );

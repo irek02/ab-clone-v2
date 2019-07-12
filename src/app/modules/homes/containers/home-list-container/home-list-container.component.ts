@@ -16,6 +16,8 @@ export interface Home {
   };
 }
 
+
+
 @Component({
   selector: 'app-home-list-container',
   templateUrl: './home-list-container.component.html',
